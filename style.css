@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+:root {
+  --rotation: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", cursive, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(
+    to right top,
+    #037171,
+    #017e7d,
+    #008b88,
+    #009894,
+    #00a69f,
+    #11b2a9,
+    #1dbdb4,
+    #27c9be,
+    #37d5cb,
+    #45e2d7,
+    #53eee4,
+    #5ffbf1
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  position: relative;
+}
+
+.container .number {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
+  font-size: 1 rem;
+  font-weight: 500;
+  padding: 20px;
+}
+
+.number-1 {
+  --rotation: 30deg;
+}
+.number-2 {
+  --rotation: 60deg;
+}
+.number-3 {
+  --rotation: 90deg;
+  color: #037171;
+}
+.number-4 {
+  --rotation: 120deg;
+}
+.number-5 {
+  --rotation: 150deg;
+}
+.number-6 {
+  --rotation: 180deg;
+  color: #037171;
+}
+.number-7 {
+  --rotation: 210deg;
+}
+.number-8 {
+  --rotation: 240deg;
+}
+.number-9 {
+  --rotation: 270deg;
+  color: #037171;
+}
+.number-10 {
+  --rotation: 300deg;
+}
+.number-11 {
+  --rotation: 330deg;
+}
+
+.number-12 {
+  color: #037171;
+}
+
+.container .hand {
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  background-color: black;
+  border-radius: 20px;
+  transform: translateX(-50%) rotate(calc((var(--rotation) * 1deg)));
+  z-index: 10;
+  transform-origin: bottom;
+  
+}
+
+
+.container .hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  background-color: black;
+  z-index: 10;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  transform-origin: bottom;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.container .hand.seconds {
+  width: 3px;
+  height: 40%;
+  background-color: #5ffbf1;
+}
+
+.container .hand.minutes {
+  width: 7px;
+  height: 35%;
+  background-color: #009894;
+}
+
+.container .hand.hours {
+  width: 10px;
+  height: 25%;
+  background-color: #008b88;
+}
